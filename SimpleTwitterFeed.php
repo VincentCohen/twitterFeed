@@ -80,9 +80,7 @@ class SimpleTwitterFeed{
 		$objCurlHandle = curl_init();
 
 		curl_setopt($objCurlHandle, CURLOPT_URL, 'https://api.twitter.com/1.1/statuses/user_timeline.json?count='.$iAmount.'&screen_name='.$strUsername);
-
 		curl_setopt($objCurlHandle, CURLOPT_HTTPHEADER, array('Authorization: Bearer ' . $this->getToken()));
-
 		curl_setopt($objCurlHandle, CURLOPT_RETURNTRANSFER, true);
 
 		$strResult = curl_exec($objCurlHandle);
